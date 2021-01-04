@@ -1,0 +1,206 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>registration</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'discover/register_page/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="{% static 'discover/register_page/css/mdb.min.css' %}" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="{% static 'discover/register_page/css/style.min.css' %}" rel="stylesheet">
+  <style type="text/css">
+    html,
+    body,
+    header,
+    .view {
+      height: 100%;
+    }
+
+    @media (max-width: 740px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 1000px;
+      }
+    }
+
+    @media (min-width: 800px) and (max-width: 850px) {
+      html,
+      body,
+      header,
+      .view {
+        height: 650px;
+      }
+    }
+    @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      <!-- Brand -->
+     
+
+      <!-- Collapse -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!-- Left -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+           
+          </li>
+          <li class="nav-item">
+           
+          </li>
+          <li class="nav-item">
+            </a>
+          </li>
+          <li class="nav-item">
+            
+          </li>
+        </ul>
+
+        <!-- Right -->
+        <ul class="navbar-nav nav-flex-icons">
+          <li class="nav-item">
+           
+          </li>
+         
+          
+        
+
+      </div>
+
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+  <!-- Full Page Intro -->
+  <div class="view full-page-intro" style="background-image: url(https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.dhresource.com%2F0x0s%2Ff2-albu-g3-M00-49-54-rBVaHVouClCAaI7LAAGhb0Q5mis196.jpg%2Fblue-old-master-style-photography-backdrops.jpg&imgrefurl=https%3A%2F%2Fwww.dhgate.com%2Fproduct%2Fblue-old-master-style-photography-backdrops%2F407665175.html&docid=-kyp2wY-lbLBGM&tbnid=DJeBVd2pshbjfM%3A&vet=10ahUKEwjzi5W8sffhAhVM6nMBHZj7DNoQMwhgKAQwBA..i&w=1000&h=1000&bih=754&biw=1536&q=portrait%20background&ved=0ahUKEwjzi5W8sffhAhVM6nMBHZj7DNoQMwhgKAQwBA&iact=mrc&uact=8.jpg); ">
+
+    <!-- Mask & flexbox options-->
+    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+      <!-- Content -->
+      <div class="container">
+
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+
+          <!--Grid column-->
+          <div class="col-md-6 mb-4 white-text text-center text-md-left">
+
+            <h1 class="display-4 font-weight-bold">Welcome</h1>
+
+            <hr class="hr-light">
+
+           
+
+            
+           
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-md-6 col-xl-5 mb-4">
+
+            <!--Card-->
+            <div class="card">
+
+              <!--Card content-->
+              <div class="card-body">
+
+                <!-- Form -->
+                <form method="POST" action="{% url 'submitRegistration' %}">
+                  <!-- Heading -->
+
+                  {% csrf_token %}
+                  <h3 class="dark-grey-text text-center">
+                    <strong>User Registration</strong>
+                  </h3>
+                  <hr>
+
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+             
+                    <input class="form-control" name="user_name" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+             
+                    <input class="form-control" name="user_contact" id="contact" type="text" placeholder="Contact" required="required" data-validation-required-message="Please enter your phone no.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+             
+                    <input class="form-control" name="user_email" id="email" type="text" placeholder="Email" required="required" data-validation-required-message="Please enter your email.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+             
+                    <input class="form-control"  name="user_password" id="password1" type="Password" placeholder="Password" required="required" data-validation-required-message="Please enter your password.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="control-group">
+                    <div class="form-group floating-label-form-group controls mb-0 pb-2">
+             
+                    <input class="form-control" name="user_conform_password" id="password2" type="Password" placeholder="Conform Password" required="required" data-validation-required-message="Please enter your confirm password.">
+                    <p class="help-block text-danger"></p>
+                  </div>
+
+                  <div class="alert alert-info" role="alert"><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                   <input type="submit" value="save" class="btn-primary">
+                 </div>
+                </form>
+                <!-- Form -->
+
+              </div>
+
+            </div>
+            <!--/.Card-->
+
+          </div>
+          <!--Grid column-->
+
+        </div>
+        <!--Grid row-->
+
+      </div>
+      <!-- Content -->
+
+    </div>
+    <!-- Mask & flexbox options-->
+
+  </div>
+  <!-- Full Page Intro -->
+
+  <!--Main layout-->
+  </body>
+  </html>
